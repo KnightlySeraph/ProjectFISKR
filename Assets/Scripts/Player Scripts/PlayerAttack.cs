@@ -39,7 +39,7 @@ public class PlayerAttack : MonoBehaviour
 
     void ComboAttacks () {
 
-        if (Input.GetKeyDown (KeyCode.Z)) {
+        if (Input.GetKeyDown (KeyCode.Mouse0)) { //Input.GetKeyDown (KeyCode.Z)
 
             if (current_Combo_State == ComboState.COMBO_3)
                 return;

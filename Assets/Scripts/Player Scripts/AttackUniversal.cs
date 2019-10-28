@@ -19,10 +19,10 @@ public class AttackUniversal : MonoBehaviour
     }
 
     //Detect Collision
-    void DetectCollision () {
+    void DetectCollision () {           //Detect collision for weapon impact
         Collider[] hit = Physics.OverlapSphere (transform.position, radius, collisionLayer);
 
-        if(hit.Length > 0) {
+        if(hit.Length > 0) {            //If hit, hitFX is played related to position of the enemy and a message will display on the console that the enemy has been hit
             if (is_Player) {
                 Vector3 hitFX_Pos = hit[0].transform.position;
                 hitFX_Pos.y += 0.5f;
@@ -38,6 +38,6 @@ public class AttackUniversal : MonoBehaviour
             print ("We hit the " + hit[0].gameObject.name);
 
             gameObject.SetActive (false);
-        } //If we have a hit
+        } 
     }
 }

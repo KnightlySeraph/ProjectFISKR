@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     } // Movement
 
-    void RotatePlayer () {
+    void RotatePlayer () {      //Flips character facing forward in direction when moving left to right
         if (Input.GetAxisRaw (Axis.HORIZONTAL_AXIS) > 0) {
 
             transform.rotation = Quaternion.Euler (0f, -Mathf.Abs (rotation_Y), 0f);
@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         }
     } // Rotation
 
-    void AnimatePlayerWalk () {
+    void AnimatePlayerWalk () { //animation for walk plays when player is moving
 
         if (Input.GetAxisRaw (Axis.HORIZONTAL_AXIS) != 0 || Input.GetAxisRaw (Axis.HORIZONTAL_AXIS) != 0) {
 
