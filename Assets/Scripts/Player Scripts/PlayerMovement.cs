@@ -31,7 +31,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void FixedUpdate() {
-        DetectMovement ();
+        DetectMovement();
+        //DodgeBack();
     }
 
     void DetectMovement() {
@@ -66,13 +67,26 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetAxisRaw (Axis.HORIZONTAL_AXIS) != 0 || Input.GetAxisRaw (Axis.VERTICAL_AXIS) != 0) {
 
-            player_Anim.Walk (true);
+            player_Anim.Walk(true);
 
         } else {
 
-            player_Anim.Walk (false);
+            player_Anim.Walk(false);
 
         }
 
     }
+    /*
+    void DodgeBack () {
+        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+            print ("Dodge");
+            player_Anim.Dodge(true);
+            print ("player is at: " + transform.position);
+            //transform.position = myBody.position + Vector3.back;
+            //transform.position += new Vector3(2, 0, 0);
+        } else {
+            player_Anim.Dodge(false);
+        }
+    }
+    */
 }

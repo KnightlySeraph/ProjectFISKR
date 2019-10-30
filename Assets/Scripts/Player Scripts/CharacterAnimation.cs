@@ -13,7 +13,11 @@ public class CharacterAnimation : MonoBehaviour
     public void Walk (bool move) {
         anim.SetBool (AnimationTags.MOVEMENT, move);
     }
-
+    /*
+    public void Dodge () {
+        anim.SetTrigger (AnimationTags.DODGE_TRIGGER);
+    }
+    */
     public void Combo_1 () {
         anim.SetTrigger (AnimationTags.COMBO_1_TRIGGER);
     }

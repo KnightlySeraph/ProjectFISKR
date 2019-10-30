@@ -25,7 +25,7 @@ public class AttackUniversal : MonoBehaviour
         if(hit.Length > 0) {            //If hit, hitFX is played related to position of the enemy and a message will display on the console that the enemy has been hit
             if (is_Player) {
                 Vector3 hitFX_Pos = hit[0].transform.position;
-                hitFX_Pos.y += 0.5f;
+                hitFX_Pos.y += 0.5f;    //position y for hitFX to be displayed
 
                 if(hit[0].transform.forward.x > 0) {
                     hitFX_Pos.x += 0.3f;
