@@ -39,16 +39,16 @@ public class PlayerAttack : MonoBehaviour
 
     void ComboAttacks () {
 
-        if (Input.GetKeyDown (KeyCode.Mouse0)) { //Input.GetKeyDown (KeyCode.Z)
+        if (Input.GetKeyDown (KeyCode.Mouse0)) {                //Attack on mouse click
 
-            if (current_Combo_State == ComboState.COMBO_3)
+            if (current_Combo_State == ComboState.COMBO_3)      //Reset comboctate if combo3 is active
                 return;
 
-            current_Combo_State++;
+            current_Combo_State++;                              
             activateTimerToReset = true;
             current_Combo_Timer = default_Combo_Timer;
 
-            if (current_Combo_State == ComboState.COMBO_1) {
+            if (current_Combo_State == ComboState.COMBO_1) {    //attacks chosen based on combostate
                 player_Anim.Combo_1 ();
             }
 
@@ -61,12 +61,9 @@ public class PlayerAttack : MonoBehaviour
 
         }
 
-        //if (Input.GetKeyDown (KeyCode.X)) {
-
-        //}
     }
 
-    void ResetComboState () {
+    void ResetComboState () {                                   //Resets combostate
 
         if (activateTimerToReset) {
             current_Combo_Timer -= Time.deltaTime;

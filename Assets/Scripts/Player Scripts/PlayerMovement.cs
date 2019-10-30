@@ -32,18 +32,18 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate() {
         DetectMovement();
-        //DodgeBack();
+        DodgeBack();
     }
 
-    void DetectMovement() {
+    void DetectMovement() {                                                             //Detect Movement of player
         myBody.velocity = new Vector3 (
             Input.GetAxisRaw (Axis.HORIZONTAL_AXIS) * (-walk_Speed),
             myBody.velocity.y,
             Input.GetAxisRaw (Axis.VERTICAL_AXIS) * (-z_Speed));
 
-    } // Movement
+    }
 
-    void RotatePlayer() {      //Rotates player facing direction of movement
+    void RotatePlayer() {                                                               //Rotates player facing direction of movement
         if (Input.GetAxisRaw(Axis.HORIZONTAL_AXIS) > 0) {
 
             transform.rotation = Quaternion.Euler (0f, -Mathf.Abs (rotation_X), 0f);
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         }
     } // Rotation
 
-    void AnimatePlayerWalk () { //animation for walk plays when player is moving
+    void AnimatePlayerWalk () {                                                         //animation for walk plays when player is moving
 
         if (Input.GetAxisRaw (Axis.HORIZONTAL_AXIS) != 0 || Input.GetAxisRaw (Axis.VERTICAL_AXIS) != 0) {
 
@@ -76,17 +76,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-    /*
-    void DodgeBack () {
-        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+    
+    void DodgeBack () {                                                                 //Dodge
+        if (Input.GetKeyDown(KeyCode.E)) {
             print ("Dodge");
-            player_Anim.Dodge(true);
+            player_Anim.Dodge();
             print ("player is at: " + transform.position);
-            //transform.position = myBody.position + Vector3.back;
-            //transform.position += new Vector3(2, 0, 0);
-        } else {
-            player_Anim.Dodge(false);
         }
     }
-    */
+    
 }

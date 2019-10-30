@@ -13,11 +13,11 @@ public class CharacterAnimation : MonoBehaviour
     public void Walk (bool move) {
         anim.SetBool (AnimationTags.MOVEMENT, move);
     }
-    /*
+    
     public void Dodge () {
         anim.SetTrigger (AnimationTags.DODGE_TRIGGER);
     }
-    */
+    
     public void Combo_1 () {
         anim.SetTrigger (AnimationTags.COMBO_1_TRIGGER);
     }
@@ -42,13 +42,5 @@ public class CharacterAnimation : MonoBehaviour
         if (attack == 0) {
             anim.SetTrigger (AnimationTags.ATTACK_TRIGGER);
         }
-
-        //if (attack == 1) {
-        //    anim.SetTrigger (AnimationTags.ATTACK_2_TRIGGER);
-        //}
-
-        //if (attack == 2) {
-        //    anim.SetTrigger (AnimationTags.ATTACK_3_TRIGGER);
-        //}
     }
 }
