@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b31e059bab8cd49979a285276b8f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon_Attack_Point: {fileID: 1339583860}
+  weapon_Attack_Point: {fileID: 0}
 --- !u!1 &135916495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,12 +1316,6 @@ MonoBehaviour:
   slots:
   - {fileID: 376552517}
   - {fileID: 204597919}
---- !u!1 &1339583860 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5233022000264158743, guid: 35f9c094132f9e7439251b1b337521de,
-    type: 3}
-  m_PrefabInstance: {fileID: 64101317200974194}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1526980365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,8 +1519,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 8846265947089933613, guid: 7cbf691ab5eb0364bb50601f1199c748,
     type: 3}
-  PickPosition: {x: 0.084, y: 0.065, z: 0.036}
-  PickRotation: {x: -187.908, y: -93.608, z: 138.025}
+  PickPosition: {x: 0, y: 0, z: 0}
+  PickRotation: {x: 0, y: 0, z: 0}
 --- !u!65 &1908914970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2600,11 +2594,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 65117675850500420, guid: 35f9c094132f9e7439251b1b337521de,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 326058287036576855, guid: 35f9c094132f9e7439251b1b337521de,
         type: 3}
       propertyPath: inventory
@@ -2616,6 +2605,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 389adbd24096a194d9dcf831c0372c7d,
         type: 3}
+    - target: {fileID: 65117675850500420, guid: 35f9c094132f9e7439251b1b337521de,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6855729678703285122, guid: 35f9c094132f9e7439251b1b337521de, type: 3}
     - {fileID: 64101317200974196, guid: 35f9c094132f9e7439251b1b337521de, type: 3}
