@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float rotation_Speed = 15f;
 
+    //public Inventory inventory;
+
     private void Awake () {
         player_Anim = GetComponentInChildren<CharacterAnimation> ();
         myBody = GetComponent<Rigidbody> ();
@@ -76,6 +78,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+    /*
+    private void OnControllerColliderHit (ControllerColliderHit hit) {
+        IInventoryItem item = hit.collider.GetComponent<IInventoryItem> ();
+        if(item != null) {
+            inventory.AddItem (item);
+            print ("added item");
+        }
+    }
+    */
+
     /*
     void DodgeBack () {
         if (Input.GetKeyDown(KeyCode.LeftShift)) {
